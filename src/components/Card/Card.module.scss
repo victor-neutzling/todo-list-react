@@ -1,0 +1,35 @@
+.card{
+    transition: 0.3s;
+    background-color: white;
+    //width: 100%;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    margin: 12px 24px;
+    width: 100%;
+    padding: 0 24px;
+    transition: 0.3s;
+    cursor: pointer;
+    h1{
+        //text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+
+        font-weight: lighter;
+    }
+    h2{
+        //text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+        margin-left: -5px;
+        font-weight: lighter;
+    }
+    &:hover{
+        box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.5);
+    }
+    h3{ 
+        //text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+        font-weight: lighter;
+    }
+    
+}
+.selectedCard{
+    transition: 0.3px;
+    box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.5);
+}

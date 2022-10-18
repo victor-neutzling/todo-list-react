@@ -1,0 +1,73 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    box-sizing: border-box;
+    .inputWrapper {
+        padding: 4px 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .label {
+            line-height: 12px;
+            padding: 8px 12px;
+            color: black;
+            text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+        .input {
+            font-weight: lighter;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 8px 12px;
+            border-radius: 12px;
+            border: none;
+            box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+            background-color: rgb(233, 233, 233);
+            font-size: 18px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+                "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+                "Helvetica Neue", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+            
+        }
+        select{
+            display: inline;
+            cursor: pointer;
+            
+            
+        }
+    }
+    .submitButton {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 8px;
+        border-radius: 12px;
+        border: none;
+        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+        background-color: rgb(233, 233, 233);
+        margin: 24px;
+        transition: 0.1s;
+        font-size: 24px;
+        font-weight: lighter;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+            "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+            "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: none;
+        }
+
+        &:active {
+            box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5) !important;
+        }
+    }
+}

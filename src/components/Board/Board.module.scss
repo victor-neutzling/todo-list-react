@@ -1,0 +1,19 @@
+.board{
+    transition: 0.3s;
+    min-height: 240px;
+    background-color: rgb(233, 233, 233);
+    min-width: 100%;
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 12px 24px;
+
+    .noCards{
+        font-weight: lighter;
+        
+    }
+    
+}
