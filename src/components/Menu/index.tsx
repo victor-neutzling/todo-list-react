@@ -32,6 +32,7 @@ export default function Menu({
         <div className={style.menu}>
             {selected ? (
                 <>
+                <div>
                     <button className={style.menuButton} onClick={deleteCard}>
                         delete
                     </button>
@@ -39,16 +40,24 @@ export default function Menu({
                     <button className={style.menuButton} onClick={moveCardUp}>
                         push up
                     </button>
+                </div>
+                <div>
                     <button className={style.menuButton} onClick={moveCardDown}>
                         push down
                     </button>
+                    <button className={style.menuButton} onClick={clearCards}>
+                        clear board
+                    </button>
+                </div>
                 </>
             ) : (
+                <>
                 <h2>Click on a task to select it or</h2>
-            )}
             <button className={style.menuButton} onClick={clearCards}>
                 clear board
             </button>
+                </>
+            )}
         </div>
     );
 }

@@ -47,5 +47,9 @@
 @media only screen and (max-width: 720px) {
     .appWrapper {
         width: 100% !important;
+        padding: 18px!important;
+    }
+    .App {
+        padding: 0!important;
     }
 }

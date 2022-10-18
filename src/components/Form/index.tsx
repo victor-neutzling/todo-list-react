@@ -39,7 +39,7 @@ export default function Form({
     return (
         <form className={style.form} onSubmit={submitHandler}>
             <div className={style.inputWrapper}>
-                <label htmlFor="title" className={style.label}>title</label>
+                <label htmlFor="title" className={style.label}>Title</label>
                 <input
                     className={style.input}
                     required
@@ -50,7 +50,7 @@ export default function Form({
                 />
             </div>
             <div className={style.inputWrapper}>
-                <label htmlFor="description" className={style.label} >description</label>
+                <label htmlFor="description" className={style.label} >Description</label>
                 <input
                     value={description}
                     className={style.input}
