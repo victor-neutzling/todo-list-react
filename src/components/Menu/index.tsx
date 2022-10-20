@@ -19,30 +19,30 @@ export default function Menu({
     }
 
     return (
-        <div className={style.menu}>
+            <><h2 className={style.text}>Drag and drop cards to rearrange them</h2><div className={style.menu}>
             {selected ? (
                 <>
-                <div>
-                    <button className={style.menuButton} onClick={deleteCard}>
-                        delete
-                    </button>
+                    <div>
+                        <button className={style.menuButton} onClick={deleteCard}>
+                            delete
+                        </button>
 
-                </div>
-                <div>
+                    </div>
+                    <div>
 
-                    <button className={style.menuButton} onClick={clearCards}>
-                        clear board
-                    </button>
-                </div>
+                        <button className={style.menuButton} onClick={clearCards}>
+                            clear board
+                        </button>
+                    </div>
                 </>
             ) : (
                 <>
-                <h2>Click on a task to select it or</h2>
-            <button className={style.menuButton} onClick={clearCards}>
-                clear board
-            </button>
+                    <h2>Click on a task to select it or</h2>
+                    <button className={style.menuButton} onClick={clearCards}>
+                        clear board
+                    </button>
                 </>
             )}
-        </div>
+        </div></>
     );
 }
