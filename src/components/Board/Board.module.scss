@@ -15,5 +15,13 @@
         font-weight: lighter;
         
     }
+
+    .draggableWrapper{
+        width: 100%;
+        display: flex;
+        padding: 0;
+        margin: 12px 0;
+        box-sizing: border-box;
+    }
     
 }

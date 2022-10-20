@@ -14,6 +14,14 @@ function App() {
     const [cards, setCards] = useState<Array<ICard>>(loadCards() || []);
     const [selected, setSelected] = useState<string>("");
 
+    function dragEndHandler(result:any){
+        const newCards = Array.from(cards);
+        const [rearrangedCards] = newCards.splice(result.source.index, 1);
+        newCards.splice(result.destination.index,0,rearrangedCards)
+        
+        setCards(newCards)
+    }
+
     function deleteCard(): void {
         let newCards: Array<ICard> = [];
 
@@ -24,39 +32,6 @@ function App() {
         });
         setCards(newCards);
         setSelected("");
-    }
-
-    function moveCardUp() {
-        let newCards: Array<ICard> = cards.map((c: ICard) => c);
-
-        for (let i = 0; i < cards.length; i++) {
-            if (newCards[i].id === selected) {
-                if (i === 0) break;
-
-                //swaps the selected card with the previous one
-                let temp = newCards[i - 1];
-                newCards[i - 1] = newCards[i];
-                newCards[i] = temp;
-                break;
-            }
-        }
-        setCards(newCards);
-    }
-    function moveCardDown() {
-        let newCards: Array<ICard> = cards.map((c: ICard) => c);
-
-        for (let i = 0; i < cards.length; i++) {
-            if (newCards[i].id === selected) {
-                if (i === cards.length - 1) break;
-
-                //swaps the selected card with the previous one
-                let temp = newCards[i + 1];
-                newCards[i + 1] = newCards[i];
-                newCards[i] = temp;
-                break;
-            }
-        }
-        setCards(newCards);
     }
 
     function selectCard(id: string): void {
@@ -144,11 +119,10 @@ function App() {
                     <Menu
                         selected={selected}
                         del={deleteCard}
-                        moveUp={moveCardUp}
-                        moveDown={moveCardDown}
+                        
                         clear={clearCards}
                     />
-                    <Board cards={cards} selectedCardID={selected} />
+                    <Board cards={cards} selectedCardID={selected} dragEndHandler={dragEndHandler}/>
                 </div>
             </div>
         </div>
